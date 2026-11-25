@@ -2,9 +2,9 @@
  * Per-working-directory agy execution mode override.
  *
  * agy's mode (`default` | `accept-edits` | `auto` | `plan`) decides which tool calls need
- * permission. Environment variables cannot be used per session inside pi-shell (the bridge
- * inherits a frozen environment), so the mode is stored per cwd in a small JSON file and can
- * be changed at runtime with the `/agy-mode` command.
+ * permission. Environment variables cannot be changed per session when Pi runs behind a web
+ * front end (child engines inherit the host process environment), so the mode is stored per
+ * working directory in a small JSON file and can be changed at runtime with `/agy-mode`.
  */
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
