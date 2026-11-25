@@ -1,0 +1,39 @@
+{
+  "name": "pi-agy-acp",
+  "version": "0.1.0",
+  "description": "Pi extension that drives the Google Antigravity CLI (agy acp) as a model provider over ACP",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "antigravity",
+    "agy",
+    "acp",
+    "agent-client-protocol",
+    "gemini",
+    "claude"
+  ],
+  "files": [
+    "src",
+    "docs",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  }
+}
